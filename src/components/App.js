@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 
 const title = 'Users and Roles'
 
-class Table extends Component {
+class App extends Component {
     render() {
         return (
             <div>
@@ -12,4 +12,4 @@ class Table extends Component {
     }
 }
 
-export default Table;
+export default App
