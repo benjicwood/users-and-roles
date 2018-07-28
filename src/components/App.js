@@ -1,15 +1,34 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 
-const title = 'Users and Roles'
+import * as actions from '../actions/actions'
+import UserList from './UserList'
 
-class App extends Component {
-    render() {
+class UsersAndRoles extends Component {
+    componentWillMount () {
+        this.props.getUsers()
+    }
+
+    render () {
+        const { usersData } = this.props
         return (
             <div>
-                {title}
+                <UserList data={usersData} />
             </div>
         )
     }
 }
 
-export default App
+const mapStateToProps = state => {
+    return {
+      usersData: state.users,
+    }
+  }
+  
+  const mapDispatchToProps = dispatch => {
+    return {
+      getUsers: () => dispatch(actions.setUsers()),
+    }
+  }
+  
+  export default connect(mapStateToProps, mapDispatchToProps)(UsersAndRoles);

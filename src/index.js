@@ -7,7 +7,10 @@ import Reducer from './reducers/reducer.js';
 
 import App from './components/App'
 
-const store = createStore(Reducer);
+const store = createStore(
+  Reducer, 
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+)
 
 ReactDOM.render(
     <Provider store={store}>
