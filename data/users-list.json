@@ -1,0 +1,51 @@
+[
+	{
+		"id": 281723,
+		"first_name": "Niamh",
+		"last_name": "Griffiths",
+		"roles": [73533,73521,73534,73520],
+		"default_role": 73534
+	},
+	{
+		"id": 281856,
+		"first_name": "Nicole",
+		"last_name": "Holmes",
+		"roles": [],
+		"default_role": null
+	},
+	{
+		"id": 281726,
+		"first_name": "Owen",
+		"last_name": "Moore",
+		"roles": [73533],
+		"default_role": 73533
+	},
+	{
+		"id": 281718,
+		"first_name": "Phoebe",
+		"last_name": "Lewis",
+		"roles": [73533,73520],
+		"default_role": null
+	},
+	{
+		"id": 281715,
+		"first_name": "Phoebe",
+		"last_name": "White",
+		"roles": [73520],
+		"default_role": 73520
+	},
+	{
+		"id": 242916,
+		"first_name": "Roger",
+		"last_name": "Blake",
+		"roles": [73520,73521],
+		"default_role": 73520
+	},
+	{
+		"id": 162161,
+		"first_name": "Sherlock",
+		"last_name": "Holmes",
+		"roles": [73521],
+		"default_role": 73521
+	}
+]

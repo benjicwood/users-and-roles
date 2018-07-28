@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-const title = 'Users and Roles'
+import Table from './table'
 
 ReactDOM.render(
-  <div>{title}</div>,
+ <Table />,
   document.getElementById('app')
 )
 
