@@ -7,6 +7,7 @@ import UserList from './UserList'
 class UsersAndRoles extends Component {
     componentWillMount () {
         this.props.getUsers()
+        this.props.getRoles()
     }
 
     render () {
@@ -22,12 +23,14 @@ class UsersAndRoles extends Component {
 const mapStateToProps = state => {
     return {
       usersData: state.users,
+      rolesData: state.roles
     }
   }
   
   const mapDispatchToProps = dispatch => {
     return {
       getUsers: () => dispatch(actions.setUsers()),
+      getRoles: () => dispatch(actions.setRoles())
     }
   }
   

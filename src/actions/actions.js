@@ -8,3 +8,10 @@ export const setUsers = () => {
         users: users
     }
 }
+
+export const setRoles = () => {
+    return {
+        type: types.SET_ROLES,
+        roles: roles
+    }
+}

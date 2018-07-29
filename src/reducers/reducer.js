@@ -1,7 +1,8 @@
 import * as types from '../actions/types'
 
 export const initialState = {
-    users: []
+    users: [],
+    roles: []
 }
 
 export default function reducer (state, action) {
@@ -9,11 +10,17 @@ export default function reducer (state, action) {
     state = state || initialState
     switch (action.type) {
         case types.SET_USERS: return setUsers(newState, action)
+        case types.SET_ROLES: return setRoles(newState, action)
         default: return state
     }
 }
 
 function setUsers (newState, action) {
+    delete action.type
+    return Object.assign(newState, {...action})
+}
+
+function setRoles (newState, action) {
     delete action.type
     return Object.assign(newState, {...action})
 }

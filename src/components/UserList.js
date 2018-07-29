@@ -7,6 +7,7 @@ export default class UserList extends Component {
                 <tr key={user.id} className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                     <td>{user.first_name}</td>
                     <td>{user.last_name}</td>
+                    <td>{user.roles}</td>
                 </tr>
             )
 
