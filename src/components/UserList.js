@@ -4,7 +4,7 @@ export default class UserList extends Component {
     renderList() {
         return this.props.data.map((user) => {
             return (
-                <tr key={user.id}>
+                <tr key={user.id} className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
                     <td>{user.first_name}</td>
                     <td>{user.last_name}</td>
                 </tr>
