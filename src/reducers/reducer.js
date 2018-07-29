@@ -1,26 +1,10 @@
-import * as types from '../actions/types'
+import { combineReducers } from 'redux';
+import users from './usersreducer';
+import roles from './rolesreducer';
 
-export const initialState = {
-    users: [],
-    roles: []
-}
+const allReducers = combineReducers({
+    users: users,
+    roles: roles
+})
 
-export default function reducer (state, action) {
-    const newState = { ...initialState }
-    state = state || initialState
-    switch (action.type) {
-        case types.SET_USERS: return setUsers(newState, action)
-        case types.SET_ROLES: return setRoles(newState, action)
-        default: return state
-    }
-}
-
-function setUsers (newState, action) {
-    delete action.type
-    return Object.assign(newState, {...action})
-}
-
-function setRoles (newState, action) {
-    delete action.type
-    return Object.assign(newState, {...action})
-}
+export default allReducers

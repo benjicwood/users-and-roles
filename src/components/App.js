@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 
 import * as actions from '../actions/actions'
 import UserList from './UserList'
+import RolesList from './RolesList'
 
 class UsersAndRoles extends Component {
     componentWillMount () {
@@ -11,10 +12,11 @@ class UsersAndRoles extends Component {
     }
 
     render () {
-        const { usersData } = this.props
+        const { usersData, rolesData } = this.props
         return (
             <div>
                 <UserList data={usersData} />
+                <RolesList data={rolesData} />
             </div>
         )
     }
@@ -22,8 +24,8 @@ class UsersAndRoles extends Component {
 
 const mapStateToProps = state => {
     return {
-      usersData: state.users,
-      rolesData: state.roles
+      usersData: state.users.users,
+      rolesData: state.roles.roles
     }
   }
   
