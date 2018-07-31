@@ -15,7 +15,7 @@ class UsersAndRoles extends Component {
         const { usersData, rolesData } = this.props
         return (
             <div>
-                <UserList data={usersData} />
+                <UserList users={usersData} roles={rolesData} />
                 <RolesList data={rolesData} />
             </div>
         )
