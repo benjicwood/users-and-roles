@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 
 import * as actions from '../actions/actions'
 import UserList from './UserList'
-import RolesList from './RolesList'
 
 class UsersAndRoles extends Component {
     componentWillMount () {
@@ -16,7 +15,6 @@ class UsersAndRoles extends Component {
         return (
             <div>
                 <UserList users={usersData} roles={rolesData} />
-                <RolesList data={rolesData} />
             </div>
         )
     }
