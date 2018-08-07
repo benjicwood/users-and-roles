@@ -13,13 +13,8 @@ export default class UserList extends Component {
 
             const setRoles = userRoles.forEach(element => {
                 // return element.name
-               arrRoles.push(element.name)
-             })
-console.log(arrRoles.toString())
-
-       //     const userRoleName = userRole ? userRole.name : "TBC"
-
-            const userRoleName = userRoles ? userRoles.name : "TBC"
+                arrRoles.push(element.name)
+            })
 
             const userRoleColour = userRole ? userRole.colour : "808080"
 
