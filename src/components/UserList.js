@@ -6,16 +6,16 @@ export default class UserList extends Component {
     renderList() {
         return this.props.users.sort(sortNames).map(user => {
             const userRole = this.props.roles.find(role => user.default_role === role.id)
-
             const userRoles = this.props.roles.filter(role => user.roles.includes(role.id))
 
             const arrRoles = []
 
             const setRoles = userRoles.forEach(element => {
-                // return element.name
+                // get users role and set to an array for displaying
                 arrRoles.push(element.name)
             })
 
+            // use default_role to decide the colour of the line or use default grey
             const userRoleColour = userRole ? userRole.colour : "808080"
 
             return (
