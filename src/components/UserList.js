@@ -7,7 +7,20 @@ export default class UserList extends Component {
         return this.props.users.sort(sortNames).map(user => {
             const userRole = this.props.roles.find(role => user.default_role === role.id)
 
-            const userRoleName = userRole ? userRole.name : "TBC"
+            const userRoles = this.props.roles.filter(role => user.roles.includes(role.id))
+
+            const arrRoles = []
+
+            const setRoles = userRoles.forEach(element => {
+                // return element.name
+               arrRoles.push(element.name)
+             })
+console.log(arrRoles.toString())
+
+       //     const userRoleName = userRole ? userRole.name : "TBC"
+
+            const userRoleName = userRoles ? userRoles.name : "TBC"
+
             const userRoleColour = userRole ? userRole.colour : "808080"
 
             return (
@@ -18,7 +31,7 @@ export default class UserList extends Component {
                 >
                     <td>{user.first_name}</td>
                     <td>{user.last_name}</td>
-                    <td>{userRoleName}</td>
+                    <td>{arrRoles.join(', ')}</td>
                 </tr>
             );
         });
